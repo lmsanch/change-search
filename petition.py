@@ -46,6 +46,7 @@ j = 0
 for page in offsets:
     options = webdriver.ChromeOptions()
     options.add_argument(f'headless')
+    # change to the location of your chrome driver
     driver_chrome = webdriver.Chrome('/Users/luissanchez/Dropbox (Personal)/chromedriver_osx/chromedriver', options=options)
     url = url_seed + url_action + '&offset=' + str(page)
     driver_chrome.get(url)
