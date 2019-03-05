@@ -38,8 +38,8 @@ for i, page in enumerate(menu.find_all('a', class_='phxxxs js-pagination-link'))
     pages_list.append(int(page['data-page-number']))
 
 # list of pages to collect
-pages_to_parse = np.array(list(range(1, max(pages_list)+1)))
-offsets = (pages_to_parse*10)-10
+pages_to_parse = np.array(list(range(0, max(pages_list))))
+offsets = pages_to_parse*10
 pt = Petition()
 data_dict = {}
 j = 0
